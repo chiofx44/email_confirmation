@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Confirmed</title>
+
+  <!-- Ubuntu Font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #EFF1F5;
+      font-family: 'Ubuntu', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .confirmed-text {
+      font-size: 20px;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .confirmed-text .icon {
+      color: green;
+      font-size: 24px;
+    }
+
+    .continue-btn {
+      background-color: green;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .continue-btn:hover {
+      background-color: #006400;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="confirmed-text">
+    Email Confirmed <span class="icon">✔️</span>
+  </div>
+
+  <button class="continue-btn" onclick="handleContinue()">
+    Continue →
+  </button>
+
+  <script>
+    function handleContinue() {
+      // Replace with your deep link or internal redirect
+      window.location.href = "yourapp://home"; // ← custom deep link scheme
+      // or for web-based routing
+      // window.location.href = "/dashboard";
+    }
+  </script>
+
+</body>
+</html>
